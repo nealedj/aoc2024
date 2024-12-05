@@ -8,7 +8,6 @@ def part1():
     raw_data = read_raw()
     ordering_rules, updates = read_input(raw_data)
 
-    # sorted_updates = [sort_update(ordering_rules, copy.deepcopy(update)) for update in updates]
     filtered_updates = [update for update in updates if is_in_order(ordering_rules, update)]
 
     mids = [update[len(update) // 2] for update in filtered_updates]
